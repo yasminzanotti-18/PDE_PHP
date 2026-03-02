@@ -20,7 +20,7 @@ class Usuario{
             'email' => $this->email
         ];
     }
-    public static function listar(){
+    public static function listar(){ // retorna a lista de usuario 
         return $_SESSION['usuarios'] ?? [];
     }
 
@@ -30,14 +30,22 @@ class Usuario{
     }
 
     public function atualizar($id){
-        if(isset($_SESSION['usuarios'][$id])){
-            $_SESSION['usuarios'][$id]=[
+        if(isset($_SESSION['usuarios'][$id])){ // verifica se o usuario existe
+            $_SESSION['usuarios'][$id]=[ //atualizar com novos dados
                 'nome' => $this -> nome,
                 'email' => $this -> email
             ];
         }
     }
+
+  public static function excluir($id){
+    if(isset($_SESSION['usuarios'][$id])){ //verifica se o usuario existe 
+        unset($_SESSION['usuarios'][$id]); //remove o usuario 
+    }
+  }
+
 }
+
 
 
 ?>
