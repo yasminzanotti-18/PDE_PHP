@@ -19,6 +19,8 @@ case 'produto/listar':
     $produtoController->listarProduto();
 break;
 
+case '':
+
 default:
     echo "Entrar no Sistema!";
 break;

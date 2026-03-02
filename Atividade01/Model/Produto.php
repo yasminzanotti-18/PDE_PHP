@@ -31,6 +31,10 @@ class Produto{
     public static function listar(){
         return $_SESSION['produtos'] ?? [];
     }
+
+    public static function excluir(){
+
+    }
 }
 
 ?>
