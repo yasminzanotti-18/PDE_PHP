@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Cadastro</title>
+    <title>Formulario Cadastro 🐒</title>
 </head>
 <body>
     <a href="/PDE_PHP/MVC_exemplo/usuario/listar"> Ir para tela Listar</a>
