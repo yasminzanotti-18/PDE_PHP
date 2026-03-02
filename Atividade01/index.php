@@ -1,28 +1,36 @@
-<?php
+<?php //Início do PHP
 
-require_once "Controller/ProdutoController.php";
+require_once "Controller/produtoController.php"; //Criando o produto
 
-$produtoController = new ProdutoController();
-$route = $_GET['route'] ?? '';
+$ProdutoController = new produtoController(); //Criando uma classe
+$route = $_GET["route"] ?? '';
 
-switch($route){
+switch ($route) {
+    case 'produto/telaRegistro':
+        $ProdutoController -> telaRegistro(); //Função tela cadastro
+        break;
 
-case 'produto/telaCadastro':
-    $produtoController->telaCadastro();
-break;
+    case 'produto/Salvar':
+        $ProdutoController -> registrar(); //registra 
+        break;
 
-case 'produto/salvar':
-    $produtoController->cadastrar();
-break;
+    case 'produto/listar':
+        $ProdutoController-> listarProdutos (); //lista
+        break;
 
-case 'produto/listar':
-    $produtoController->listarProduto();
-break;
+    case 'produto/telaEditar':
+        $ProdutoController->telaEditar(); //edita
+        break;
 
-case '':
+    case 'produto/atualizar': 
+        $ProdutoController->atualizar(); //atualiza
+        break;
 
-default:
-    echo "Entrar no Sistema!";
-break;
+    case 'produto/excluir':
+        $ProdutoController->excluir(); //exclui
+        break;
+
+    default:
+        echo "Página não Encontrada!";
+        break;
 }
-?>
