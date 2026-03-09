@@ -17,7 +17,7 @@ class Livro{
 
     public function Salvar() {
         $pdo = Database::conectar();
-        $sql = "INSERT INTO livros (titulo, autor, ano, editora) VALUES (:titulo, :autor, :ano, :editora)";
+        $sql = "INSERT INTO livros (titulo, autor, ano_publicacao, editora) VALUES (:titulo, :autor, :ano, :editora)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['titulo'=> $this->titulo, 'autor' => $this->autor, 'ano' => $this->ano_publicacao, 'editora' => $this->editora]);
 

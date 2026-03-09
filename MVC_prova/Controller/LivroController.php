@@ -25,7 +25,7 @@ class LivroController{
 
     public function listarLivros(){
         $livros = Livro::listar();
-        require 'View/LivrosListar.php';
+        require 'View/LivroListar.php';
     }
 
     public function telaEditar(){

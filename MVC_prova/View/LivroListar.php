@@ -19,7 +19,7 @@
                 <tr>
                     <td><?= $l['TITULO']?></td>
                     <td><?= $l['AUTOR']?></td>
-                    <td><?= $l['ANO']?></td>
+                    <td><?= $l['ANO_PUBLICACAO']?></td>
                     <td><?= $l['EDITORA']?></td>
                     <td>
                         <a href="/PDE_PHP/MVC_prova/livro/telaEditar?id=<?= $l['ID'] ?>">Editar</a>
